@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title>Личный сайт студента GeekBrains</title>
+	<link rel="stylesheet" href="style.css">
+<script type="text/javascript">
+		
+		alert("Попробуйте угадать число от 0 до 100");
+var name1 = prompt("Введите имя первого игрока:");
+var name2 = prompt("Введите имя второго игрока:");
+var x = parseInt(Math.random()*100);
+while(true) {
+	var p1 = parseInt(prompt(name1 + ", введите число"));
+	if(p1 < x) {
+		alert(name1 + ", у вас слишком маленькое число");
+	} else if(p1 > x) {
+		alert(name1 + ", у вас слишком большое число");
+	}
+	if(p1 == x) {
+		alert("Вы победили!");
+		break;
+	} else {
+		var p2 = parseInt(prompt(name2 + ", введите число"));
+		if(p2 == x) {
+			alert("Вы угадали!");
+			break;
+		}
+	}
+	if(p2 < x) {
+		alert(name2 + ", у вас слишком маленькое число");
+	} else if(p2 > x) {
+		alert(name2 + ", у вас слишком большое число");
+	}
+}
+	</script>
+</head>
+<body>
+	<div id="header">
+		<a href="index.html">Главная</a><span>/</span>
+		<a href="puzzle.html">Загадки</a><span>/</span>
+		<a href="#">Угадайка</a><span>/</span>
+	</div>
+<div id="content">
+	<h1>Личный сайт студента GeekBrains</h1>
+    
+	    	<p>Играет 2 игра. У вас будет неограниченное количество попыток, чтобы угадать загадку.</p>
+            <br><br/>
+            <a href="#" onclick="Play();">Начать игру</a>
+	    </div>
+</div>
+
+<div id="footer">
+	Copyright © 2016 <a href="https://geekbrains.ru/"> GeekBrains </a>
+</div>
+
+</body>
+</html>
